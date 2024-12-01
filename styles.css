@@ -1,0 +1,159 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(32, 31, 31);
+}
+
+/* Slideshow Background */
+.slideshow {
+  top:80%
+  margin-right: 10%;
+  margin-left: 60%;
+  width: 32%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  animation: slideShow 5s infinite;
+} 
+
+.slides {
+  display: flex;
+  animation: slideShow 60s infinite; /* Adjust duration as needed */
+}
+
+
+.slides img {
+  
+  width: 100%; /* Adjust for responsive design */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  2.94% { transform: translateX(-100%); }
+  5.88% { transform: translateX(-200%); }
+  8.82% { transform: translateX(-300%); }
+  11.76% { transform: translateX(-400%); }
+  14.71% { transform: translateX(-500%); }
+  17.65% { transform: translateX(-600%); }
+  20.59% { transform: translateX(-700%); }
+  23.53% { transform: translateX(-800%); }
+  26.47% { transform: translateX(-900%); }
+  29.41% { transform: translateX(-1000%); }
+  32.35% { transform: translateX(-1100%); }
+  35.29% { transform: translateX(-1200%); }
+  38.24% { transform: translateX(-1300%); }
+  41.18% { transform: translateX(-1400%); }
+  44.12% { transform: translateX(-1500%); }
+  47.06% { transform: translateX(-1600%); }
+  50% { transform: translateX(-1700%); }
+  52.94% { transform: translateX(-1800%); }
+  55.88% { transform: translateX(-1900%); }
+  58.82% { transform: translateX(-2000%); }
+  61.76% { transform: translateX(-2100%); }
+  64.71% { transform: translateX(-2200%); }
+  67.65% { transform: translateX(-2300%); }
+  70.59% { transform: translateX(-2400%); }
+  73.53% { transform: translateX(-2500%); }
+  76.47% { transform: translateX(-2600%); }
+  79.41% { transform: translateX(-2700%); }
+  82.35% { transform: translateX(-2800%); }
+  85.29% { transform: translateX(-2900%); }
+  88.24% { transform: translateX(-3000%); }
+  91.18% { transform: translateX(-3100%); }
+  94.12% { transform: translateX(-3200%); }
+  97.06% { transform: translateX(-3300%); }
+  100% { transform: translateX(-3400%); }
+}
+
+
+
+
+
+/* Countdown Content */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: rgb(255, 242, 242);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content h1 {
+  font-size: 2rem;
+}
+
+#countdown {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Falling Hearts */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: fall 5s linear infinite;
+}
+
+.heart:before, .heart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    left: random(0, 100%);
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+
+}
+
+
+
+
+
