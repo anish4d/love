@@ -4,14 +4,13 @@ body, html {
   padding: 0;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
-  background-color: rgb(32, 31, 31);
 }
 
 /* Slideshow Background */
 .slideshow {
-  top:auto
-  margin-right: 10%;
-  margin-left: 60%;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -21,24 +20,15 @@ body, html {
 .slides {
   display: flex;
   width: 100%;
-  height: 80%;
-  animation: slideShow 5s infinite;
-} 
-
-.slides {
-  display: flex;
-  animation: slideShow 60s infinite; /* Adjust duration as needed */
+  height: 100%;
+  animation: slideShow 60s infinite;
 }
 
-
 .slides img {
-  
-  width: 100%; /* Adjust for responsive design */
+  width: 100%;
   object-fit: cover;
   flex-shrink: 0;
 }
-
-
 
 @keyframes slideShow {
   0% { transform: translateX(0); }
@@ -75,26 +65,23 @@ body, html {
   91.18% { transform: translateX(-3100%); }
   94.12% { transform: translateX(-3200%); }
   97.06% { transform: translateX(-3300%); }
-  100% { transform: translateX(-3400%); }
+  100% { transform: translateX(-3400%);
 }
-
-
-
-
+}
 
 /* Countdown Content */
 .content {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  text-align: left;
-  color: rgb(255, 242, 242);
+  text-align: center;
+  color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #countdown {
@@ -150,10 +137,4 @@ body, html {
     top: 110%;
     opacity: 0;
   }
-
 }
-
-
-
-
-
